@@ -7,7 +7,7 @@ import LibrarianDashboard from '@/components/librarian/AdminDashboard.vue'
 import UserDashboard from '@/components/users/Dashboard.vue'
 import requests from '@/components/librarian/requests.vue'
 import mybooks from '@/components/users/mybooks.vue'
-import adminstats from '@/components/librarian/adminstats.vue'
+import adminstats from '@/components/librarian/AdminStats.vue'
 const routes = [
     { path: '/', component: Home },
     { path: '/login', component: Login },

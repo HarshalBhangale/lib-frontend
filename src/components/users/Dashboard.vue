@@ -1,5 +1,13 @@
 <template>
 <div class="dashboard">
+    <nav class="navbar">
+      <div class="navbar-left">IITM 24/7 Mad2 Library</div>
+      <ul>
+        <li><router-link to="/mybooks">Mybooks</router-link></li>
+        <!-- <li><router-link to="/stats">Analytics</router-link></li> -->
+        <li><router-link to="/">Logout</router-link></li>
+      </ul>
+    </nav>
     <h2>User Dashboard</h2>
     <div>
     <input v-model="searchQuery" placeholder="Search sections or e-books" @input="searchContent" />
