@@ -8,6 +8,7 @@
         <button type="submit">Login</button>
         <p v-if="message" class="error-message">{{ message }}</p>
       </form>
+      <p>New to the platform? <router-link to="/register">Register here</router-link></p>
     </div>
   </div>
 </template>
@@ -57,9 +58,9 @@ export default {
 
 .login-box {
   background: #fff;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 60px;
+  padding: 40px;
   width: 100%;
   max-width: 280px;
   text-align: center;

@@ -1,6 +1,7 @@
 <template>
 <div class="home">
-    <h1>Welcome to the Library Management System</h1>
+    <img src="../../assets/home.png" width="30%">
+    <h1>Welcome to IITM Central Library MAD2 Project</h1>
     <div class="buttons">
     <button @click="navigateTo('adminlogin')">Admin Login</button>
     <button @click="navigateTo('register')">Register</button>
@@ -40,8 +41,8 @@ h1 {
 
 .buttons {
   display: flex;
-  flex-direction: row; /* Change to row to align buttons horizontally */
-  gap: 15px; /* Space between buttons */
+  flex-direction: row; 
+  gap: 15px;
 }
 
 button {

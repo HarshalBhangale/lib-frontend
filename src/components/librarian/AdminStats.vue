@@ -1,15 +1,45 @@
 <template>
+  <nav class="navbar">
+    <div class="navbar-left">IITM Central Librarian Portal 📕 😅</div>
+      <ul>
+        <li><router-link to="/admindashboard">Admin Dashboard</router-link></li>
+        <li><router-link to="/requests">User Requests</router-link></li>
+        <li><router-link to="/">Logout</router-link></li>
+      </ul>
+    </nav>
     <div class="admin-stats">
       <h1>Statistics</h1>
-      <div class="stats">
-        <p>Active Users: {{ activeUsers }}</p>
-        <p>Total Sections: {{ totalSections }}</p>
-        <p>Total E-Books: {{ totalEbooks }}</p>
-        <p>Total Books Requested: {{ totalRequested }}</p>
-        <p>Total Books Approved: {{ totalApproved }}</p>
-        <p>Total Books Rejected: {{ totalRejected }}</p>
-        <p>Total Books Revoked: {{ totalRevoked }}</p>
+      <div class="stats-grid">
+      <div class="stat-box">
+        <p>Active Users</p>
+        <span>{{ activeUsers }}</span>
       </div>
+      <div class="stat-box">
+        <p>Total Sections</p>
+        <span>{{ totalSections }}</span>
+      </div>
+      <div class="stat-box">
+        <p>Total E-Books</p>
+        <span>{{ totalEbooks }}</span>
+      </div>
+      <div class="stat-box">
+        <p>Total Books Requested</p>
+        <span>{{ totalRequested }}</span>
+      </div>
+      <div class="stat-box">
+        <p>Total Books Approved</p>
+        <span>{{ totalApproved }}</span>
+      </div>
+      <div class="stat-box">
+        <p>Total Books Rejected</p>
+        <span>{{ totalRejected }}</span>
+      </div>
+      <div class="stat-box">
+        <p>Total Books Revoked</p>
+        <span>{{ totalRevoked }}</span>
+      </div>
+    </div>
+    <h2>Statistics Charts</h2>
       <div class="chart-container">
         <canvas id="barChart"></canvas>
         <canvas id="pieChart"></canvas>
@@ -165,14 +195,42 @@
     font-size: 1.1rem;
   }
   
-  .chart-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  canvas {
-    max-width: 400px;
-    margin: 20px;
-  }
+  .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-box p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.stat-box span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+canvas {
+  max-width: 400px;
+  margin: 20px;
+}
   </style>

@@ -39,7 +39,7 @@ export default {
         localStorage.setItem('token', response.data.access_token);
         setTimeout(() => {
           this.$router.push('/admindashboard');
-        }, 2000); // Redirect after 2 seconds
+        }, 2000); 
       })
       .catch(error => {
         this.message = 'Invalid admin credentials.';
@@ -49,6 +49,62 @@ export default {
 };
 </script>
 
-<style>
-/* Add your styles here */
+<style scoped>
+.admin-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button {
+  width: 100%;
+  background-color: #5c67f2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a54e1;
+}
+
+p {
+  color: #e63946;
+  margin-top: 15px;
+}
 </style>

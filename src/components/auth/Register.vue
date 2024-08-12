@@ -8,6 +8,7 @@
         <button type="submit">Register</button>
         <p v-if="message" class="message">{{ message }}</p>
       </form>
+      <p>Already registered? <router-link to="/login">Login here</router-link></p>
     </div>
   </div>
 </template>
